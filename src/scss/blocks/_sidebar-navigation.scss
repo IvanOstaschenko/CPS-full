@@ -1,0 +1,29 @@
+.sidebar-navigation{
+
+  &__item{
+    &:not(:first-child){
+      margin-top: 20px;
+    }
+  }
+
+  &__link{
+    border: 4px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: var(--font-weight-medium);
+    padding-left: 12px;
+
+    @include mobile-above{
+      padding-left: 20px;
+    }
+
+    &--active{
+      border-left-color: var(--color-aqua);
+      color: var(--color-gray-links);
+    }
+
+    @include hover{
+      color: var(--color-gray-links);
+    }
+  }
+}

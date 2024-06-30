@@ -1,0 +1,116 @@
+.table{
+  border-collapse: collapse;
+  width: 100%;
+  position: relative;
+
+  &:after{
+    background: linear-gradient(270deg, #f8f8f8 0.04%, rgba(248, 248, 248, 0) 100%);;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include mobile-above{
+      display: none;
+    }
+  }
+
+  @include mobile{
+    display: block;
+    overflow: hidden;
+    margin-right: -24px;
+  }
+
+  &__header{
+    border-left: 16px solid transparent;
+    color: var(--color-gray-links);
+    text-align: left;
+    font-weight: var(--font-weight-medium);
+    @include mobile{
+      display: none;
+    }
+  }
+
+  &__body{
+
+    @include mobile-above{
+      background-color: #fff;
+      border-left: 16px solid #fff;
+      border-right: 16px solid #fff;
+      border-radius: 6px;
+    }
+
+    @include mobile{
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+  &__row{
+
+    @include mobile{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 75vw;
+      background-color: #fff;
+      flex-shrink: 0;
+      position: relative;
+      border-radius: 6px;
+      padding: 16px;
+      height: 200px;
+      font-size: 14px;
+    }
+    &:not(:last-child){
+
+      @include mobile-above{
+        border-bottom: 1px solid var(--color-gray-light);
+      }
+    }
+  }
+  &__cell{
+    @include mobile-above{
+      padding-block: 16px;
+    }
+
+    @include mobile{
+      display: block;
+    }
+
+    &:first-child:before{
+      @include mobile{
+        content: "Ремонтные услуги";
+        display: block;
+        color: var(--color-gray-links);
+      }
+    }
+    &:nth-child(2):before{
+      @include mobile{
+        content: "Цена";
+        display: block;
+        color: var(--color-gray-links);
+      }
+    }
+    &:nth-child(3):before{
+      @include mobile{
+        content: "Срок";
+        display: block;
+        color: var(--color-gray-links);
+      }
+    }
+    &:last-child{
+      @include mobile{
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+      }
+      @include mobile-above{
+        text-align: right;
+      }
+    }
+  }
+  &__button{
+    padding: 7px 40px 7px 12px;
+  }
+}

@@ -1,0 +1,44 @@
+.menu{
+
+  &__list{
+    display: flex;
+    margin-left: 16px;
+    overflow: scroll;
+    position: relative;
+
+    @include mobile-above{
+      margin-left: 24px;
+    }
+
+    @include tablet-above{
+      overflow: visible;
+      flex-wrap: wrap;
+      margin-left: 32px;
+      margin-right: 25px;
+    }
+  }
+
+  &__item{
+    flex-shrink: 0;
+  }
+
+  &__link{
+    display: inline-block;
+    box-sizing: border-box;
+    color: var(--color-gray-links);
+    font-weight: 500;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 6px 15px;
+
+    @include hover{
+      border-color: var(--color-aqua);
+    }
+
+    @include tablet-above{
+      padding-inline: 22px;
+    }
+  }
+
+}
+

@@ -1,0 +1,21 @@
+.pagination-slider{
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+  
+  @include mobile-above{
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet{
+  background-color: #ddd;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  &-active{
+    background-color: #b5b6bc;
+  }
+}

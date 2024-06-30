@@ -1,0 +1,12 @@
+.secondary-button{
+  background: url("../img/arrow-right.svg") no-repeat 50% 50%;
+  border-radius: 50%;
+  border: 2px solid var(--color-pink);
+  box-sizing: border-box;
+  height: 40px;
+  width: 40px;
+
+  @include hover{
+    opacity: .5;
+  }
+}

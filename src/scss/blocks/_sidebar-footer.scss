@@ -1,0 +1,40 @@
+.sidebar-footer {
+  &__inner {
+    padding: 24px 16px 32px;
+    @include mobile-above{
+      padding-inline: 24px;
+    }
+  }
+
+  &__user-menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__link {
+    display: block;
+    margin-top: 12px;
+
+    @include hover{
+      filter: opacity(50%);
+    }
+
+    &--size {
+
+      &--small {
+        font-weight: var(--font-weight-medium);
+      }
+
+      &--large {
+        font-size: 24px;
+        font-weight: var(--font-weight-bold);
+        line-height: 32px;
+      }
+    }
+  }
+
+  &__lang-block{
+    margin-top: 40px;
+  }
+}

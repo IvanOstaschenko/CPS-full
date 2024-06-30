@@ -1,0 +1,45 @@
+.about{
+
+  padding-bottom: 35px;
+
+  &__text{
+    font-size: 14px;
+    line-height: 18px;
+    height: 90px;
+    overflow: hidden;
+    padding-inline: 16px;
+    text-align: left;
+
+    @include mobile-above{
+      height: 160px;
+      line-height: 20px;
+      padding-inline: 0;
+    }
+
+    &--show{
+      height: auto;
+    }
+  }
+
+  &__button{
+    margin-left: 16px;
+    margin-top: 16px;
+
+    @include mobile-above{
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+
+  &__image{
+    margin-top: 16px;
+    height: auto;
+    width: 100%;
+    @include mobile-above{
+      border-radius: 6px;
+      margin-top: 0;
+      min-width: 50%;
+      align-self: flex-start;
+    }
+  }
+}

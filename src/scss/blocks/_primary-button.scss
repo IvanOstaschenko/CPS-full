@@ -1,0 +1,79 @@
+.primary-button{
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 0;
+  padding: 0;
+
+  &__icon-wrapper{
+    align-items: center;
+    background-color: var(--color-pink);
+    border-radius: 50%;
+    display: flex;
+    height: var(--primary-button-height);
+    justify-content: center;
+    aspect-ratio: 1;
+  }
+
+  &:after{
+    background-color: var(--color-pink);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    display: inline-block;
+    aspect-ratio: 1;
+    width: 40px;
+  }
+
+  &--icon{
+    &--phone{
+      &:after{
+        content: '';
+        background-image: url("../img/phone-icon.svg");
+      }
+    }
+    &--message{
+      &:after{
+        content: '';
+        background-image: url("../img/message-icon.svg");
+      }
+    }
+    &--user{
+      &:after{
+        content: '';
+        background-image: url("../img/user-icon.svg");
+      }
+    }
+    &--instrument{
+      &:after{
+        content: '';
+        background-image: url("../img/insrument_button.svg");
+      }
+    }
+    &--search{
+      &:after{
+        content: '';
+        background-image: url("../img/search_button.svg");
+      }
+    }
+    &--close{
+      &:after{
+        content: '';
+        background-image: url("../img/icon-close.svg");
+      }
+    }
+
+    &--search-sidebar{
+      &:after{
+        content: '';
+        background-image: url("../img/icon-search-sidebar.svg");
+      }
+    }
+  }
+
+  @include hover{
+    &:after{
+      opacity: .5;
+    }
+  }
+}

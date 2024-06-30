@@ -1,0 +1,49 @@
+.header{
+
+  &__inner{
+    background-color: #fff;
+    align-items: center;
+    display: flex;
+    padding: 18.59px 16px;
+
+    @include mobile-above{
+      padding: 18.59px 24px;
+    }
+
+    &--box-shadow{
+      &--bottom{
+        box-shadow: 0 0 0 1px #d9fff5;
+      }
+    }
+  }
+
+  &__logo{
+    margin-left: 16.73px;
+  }
+
+  &__services-menu{
+
+    padding-left: 20px;
+
+    &:before{
+      background-color: var(--color-gray-light);
+      content:'';
+      display: block;
+      height: 32px;
+      width: 2px;
+    }
+  }
+
+  &__user-menu{
+    column-gap: 16px;
+    margin-left: auto;
+  }
+
+  &--hidden{
+    &--desktop{
+      @include tablet-above{
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.read-more-button {
+  font-weight: var(--font-weight-medium);
+  @include reset-button;
+
+  @include hover {
+    cursor: pointer;
+    color: aqua;
+  }
+
+  &:before {
+    content: url("../img/read-more-arrows.svg");
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+  }
+
+  &__second-text {
+    display: none;
+  }
+
+  &--show {
+    &.read-more-button {
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+
+    .read-more-button {
+
+      &__first-text {
+        display: none;
+      }
+
+      &__second-text {
+        display: inline;
+      }
+    }
+  }
+}

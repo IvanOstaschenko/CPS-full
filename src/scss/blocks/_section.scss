@@ -1,0 +1,30 @@
+.section {
+
+  &__inner {
+    border-top: 1px solid var(--color-section-border);
+  }
+
+  &__header {
+    background: linear-gradient(90deg, #f8f8f8 0%, #fff 100%);
+    padding: 16px 0 16px var(--section-padding-x);
+  }
+
+  &__title {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    padding-inline: var(--section-padding-x);
+    padding-top: 24px;
+    padding-bottom: 34px;
+  }
+
+  &__read-more-button {
+    display: none;
+    margin-top: 24px;
+    @include mobile-above {
+      display: inline-block;
+    }
+  }
+}

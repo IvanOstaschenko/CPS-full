@@ -1,0 +1,103 @@
+.modal{
+  position: absolute;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  transition: .3s;
+  z-index: 200;
+
+  @include desktop-above{
+    width: 515px;
+    padding-left: 55px;
+  }
+
+  &__inner{
+    background-color: #fff;
+    box-sizing: border-box;
+    border-left: 1px solid var(--color-section-border);
+    box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2), -2px 0 4px 0 rgba(69, 79, 126, 0.02);
+    min-height: 100vh;
+    height: 100%;
+    padding: 32px;
+
+    @include desktop{
+      padding: 95px 16px 16px;
+    }
+  }
+
+  &__title{
+    margin-left: -32px;
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: var(--font-weight-bold);
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    border-left-color: var(--color-aqua);
+    padding-left: 29px;
+
+    @include desktop{
+      margin-left: -16px;
+      padding-left: 13px;
+    }
+  }
+
+  &__form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  &__input{
+    border: 1px solid var(--color-gray-light);
+    border-radius: 8px;
+    padding: 11px 16px;
+
+    &:focus{
+      border-color: var(--color-aqua);
+      outline: none;
+    }
+
+    &--no-resize{
+      resize: none;
+    }
+  }
+  &__rules{
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    line-height: 16px;
+    color: var(--color-gray-links);
+  }
+  &__accent-text{
+    color: var(--color-pink);
+  }
+
+  &__button{
+    align-self: flex-end;
+    padding: 7px 40px 7px 20px;
+    border: none;
+  }
+  &__close-button{
+    position: absolute;
+    left: 0;
+    top: 32px;
+
+    @include desktop{
+      left: 16px;
+      top: 24px;
+    }
+  }
+
+  &--position{
+    &--right{
+      right: 0;
+    }
+  }
+
+  &--hidden{
+    &--right{
+      transform: translateX(100%);
+      z-index: -50;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.user-menu{
+  display: none;
+  position: relative;
+
+  @include mobile-above{
+    display: flex;
+  }
+
+  &__text{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+  }
+}

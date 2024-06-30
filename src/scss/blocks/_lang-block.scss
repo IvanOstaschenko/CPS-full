@@ -1,0 +1,23 @@
+.lang-block{
+  align-items: center;
+  display: flex;
+  gap: 7px;
+
+  &__button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: -.2px;
+    padding: 0;
+
+    @include hover{
+      opacity: .5;
+    }
+  }
+
+  &__input:checked + .lang-block__text{
+    color: var(--color-gray-links);
+  }
+}

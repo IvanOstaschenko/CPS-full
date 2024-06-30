@@ -1,17 +1,39 @@
-$bgColor: #24292e;
-$text: #fff;
+@import 'normalize',
+'fonts',
+'mixins',
+'media',
+'variables',
+'utils',
+'globals';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
+@import
+'blocks/page-container',
+'blocks/read-more-button',
+'blocks/primary-button',
+'blocks/header',
+'blocks/burger-button',
+'blocks/services-menu',
+'blocks/article',
+'blocks/section',
+'blocks/content',
+'blocks/menu',
+'blocks/about',
+'blocks/user-menu',
+'blocks/button',
+'blocks/sidebar-menu',
+'blocks/sidebar-header',
+'blocks/sidebar-navigation',
+'blocks/sidebar-footer',
+'blocks/lang-block',
+'blocks/section',
+'blocks/brands',
+'blocks/secondary-button',
+'swiper-custom',
+'blocks/overlay',
+'blocks/categories',
+'blocks/prices',
+'blocks/table',
+'blocks/service-button',
+'blocks/page-footer',
+'blocks/modal';
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}

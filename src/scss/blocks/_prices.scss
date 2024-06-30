@@ -1,0 +1,34 @@
+.prices{
+  @include mobile{
+    margin-right: -24px;
+    position: relative;
+  }
+
+  &__policy{
+    font-size: 14px;
+    max-width: 400px;
+    line-height: 20px;
+    margin-top: 32px;
+  }
+
+  &__link{
+    display: inline-block;
+    font-weight: var(--font-weight-medium);
+    margin-top: 16px;
+
+    &:after{
+      content: '';
+      display: inline-block;
+      border-bottom: 2px solid var(--color-pink);
+      border-right: 2px solid var(--color-pink);
+      height: 7px;
+      width: 7px;
+      margin-left: 5px;
+      transform: rotate(-45deg);
+    }
+
+    @include hover{
+      opacity: .6;
+    }
+  }
+}

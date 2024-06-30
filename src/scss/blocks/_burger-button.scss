@@ -1,0 +1,33 @@
+.burger-button{
+  position: relative;
+
+  @include mobile-above{
+    margin-right: 20px;
+  }
+
+  &:after{
+    background-color: var(--color-pink);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    display: inline-block;
+    aspect-ratio: 1;
+    width: 40px;
+    content: '';
+    background-image: url("../img/burger_button.svg");
+  }
+
+  &:before{
+    @include mobile-above{
+      background-color: var(--color-gray-light);
+      content:'';
+      display: block;
+      height: 32px;
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      translate: -50% -50%;
+      width: 2px;
+    }
+  }
+}

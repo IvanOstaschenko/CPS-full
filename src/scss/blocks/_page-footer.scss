@@ -1,0 +1,26 @@
+.page-footer{
+  font-size: 14px;
+  color: var(--color-gray-links);
+  border-top: 1px solid var(--color-section-border);
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 16px;
+  @include mobile{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  &__public{
+    width: 330px;
+    text-align: right;
+    @include tablet{
+      width: 213px;
+    }
+    @include mobile{
+      text-align: center;
+      width: auto;
+    }
+  }
+}

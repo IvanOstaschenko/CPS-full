@@ -1,0 +1,26 @@
+.sidebar-header{
+
+  padding: 18px 16px;
+
+  @include mobile-above{
+    padding-inline: 24px;
+  }
+  @include desktop-above{
+    padding: 30px 22px;
+  }
+  &__inner{
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo{
+    margin-left: 16px;
+    @include desktop-above{
+      margin-left: 0;
+    }
+  }
+
+  &__last-button{
+    margin-left: auto;
+  }
+}
