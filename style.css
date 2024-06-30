@@ -200,7 +200,8 @@ body {
   font-family: var(--font-family);
   font-weight: var(--font-weight-regular);
   color: var(--color-text);
-  letter-spacing: -0.2px; }
+  letter-spacing: -0.2px;
+  position: relative; }
 
 ::before,
 ::after,
